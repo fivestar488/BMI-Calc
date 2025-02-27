@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>BMI Calculator - Javascript</h2>
+        <form id="bmiForm">
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input id="weight" type="number" placeholder="Enter your weight" required>
+            </div>
+            <div class="input-group">
+                <label for="height">Height (cm):</label>
+                <input id="height" type="number" placeholder="Enter your height" required>
+            </div>
+            <div class="button-group">
+                <button type="button" onclick="calculateBmi()">Calculate</button>
+                <button type="button" onclick="reload()">Clear</button>
+            </div>
+        </form>
+        <div id="result">
+            <h4 id="heading"></h4>
+            <p id="bmi-output"></p>
+            <p id="message"></p>
+            <!-- Progress Bar -->
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

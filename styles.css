@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container for the Calculator */
+  .container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #4a90e2;
+  }
+  
+  /* Input Fields */
+  .input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  button {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+  }
+  
+  /* Result Section */
+  #result {
+    margin-top: 1.5rem;
+  }
+  
+  #heading {
+    font-size: 1.25rem;
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+  }
+  
+  #bmi-output {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #message {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+
+  #result {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    transition: background-color 0.5s ease;
+  }
+  
+  /* Underweight */
+  .underweight {
+    background-color: #ffeb3b; /* Yellow */
+  }
+  
+  /* Normal weight */
+  .normal {
+    background-color: #4caf50; /* Green */
+  }
+  
+  /* Overweight */
+  .overweight {
+    background-color: #ff9800; /* Orange */
+  }
+  
+  /* Obese */
+  .obese {
+    background-color: #f44336; /* Red */
+  }
+
+  /* Emoji styles */
+.emoji {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    display: inline-block;
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  /* Progress bar container */
+#progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+/* Progress bar fill */
+#progress {
+    height: 100%;
+    width: 0; /* Initial width (will be updated dynamically) */
+    background-color: #4caf50; /* Default color (green) */
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+/* Progress bar colors based on BMI */
+.underweight #progress {
+    background-color: #ffeb3b; /* Yellow */
+}
+
+.normal #progress {
+    background-color: #4caf50; /* Green */
+}
+
+.overweight #progress {
+    background-color: #ff9800; /* Orange */
+}
+
+.obese #progress {
+    background-color: #f44336; /* Red */
+}
